@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>    
+        <title>Dummy MP3</title>
+        <meta http-equiv="x-ua-compatible" content="ie=9">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <HTA:APPLICATION
+            ID="DUMMY_MP3"
+            APPLICATIONNAME="DUMMY_MP3"
+            CAPTION="yes"
+            BORDER=""
+            ICON="./dummy.ico"
+            SHOWINTASKBAR="yes"
+            SINGLEINSTANCE="no"
+            SYSMENU="yes"
+            WINDOWSTATE="no"
+            SCROLL="no"
+            SCROLLFLAT="no"
+            INNERBORDER="no"
+            SELECTION="no"
+            MAXIMIZEBUTTON="no"
+            MINIMIZEBUTTON="no"
+            NAVIGABLE="no"
+            CONTEXTMENU="no"
+            BORDERSTYLE="yes">
+            <style>body {margin:0; background:black;}</style>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            // On met la fenetre au bonnes dimensions 
+            window.resizeTo(550, 100);
+            // On met la fenetre a bonne position 
+            window.moveTo(20, 20);
+        </script>
+        <audio controls autoplay loop>
+        <source src="dummy.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+        </audio>
+    </body>
+</html>
