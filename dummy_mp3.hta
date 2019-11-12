@@ -28,14 +28,20 @@
 
     <body>
         <script type="text/javascript">
+            var nbMinutes = 5;
             // On met la fenetre au bonnes dimensions 
             window.resizeTo(550, 100);
             // On met la fenetre a bonne position 
             window.moveTo(20, 20);
+            window.setInterval(function(){
+                var elementDummy = document.querySelector('#real_sound'); 
+                if(elementDummy) { 
+                    document.querySelector('#real_sound').play(); 
+                }
+            }, (nbMinutes*60*1000) );
         </script>
-        <audio controls autoplay loop>
-        <source src="dummy.mp3" type="audio/mp3">
-        Your browser does not support the audio tag.
+        <audio controls id="real_sound">
+            <source src="sound.mp3" type="audio/mp3">
         </audio>
     </body>
 </html>
